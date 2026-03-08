@@ -1,2 +1,27 @@
-run:
-BUILD SUCCESSFUL (total time: 27 seconds)
+import javax.swing.JOptionPane;
+
+public class VisualLuasPersegiPanjang {
+    public static void main(String[] args) {
+
+        // variabel panjang dan lebar
+        byte panjang = 15;
+        byte lebar = 30;
+
+        // input panjang
+        String inputPanjang = JOptionPane.showInputDialog("Nilai Panjang:");
+        panjang = Byte.parseByte(inputPanjang);
+
+        // input lebar
+        String inputLebar = JOptionPane.showInputDialog("Nilai Lebar:");
+        lebar = Byte.parseByte(inputLebar);
+
+        // menghitung luas
+        short luas = (short) (panjang * lebar);
+
+        // menampilkan hasil
+        JOptionPane.showMessageDialog(null,
+                "luas = panjang x lebar = " + panjang + " x " + lebar + " = " + luas);
+
+        System.exit(0);
+    }
+}
